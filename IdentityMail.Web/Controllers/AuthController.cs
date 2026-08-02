@@ -84,7 +84,7 @@ namespace IdentityMail.Web.Controllers
 		public async Task<IActionResult> Logout()
 		{
 			await _signInManager.SignOutAsync();
-			return RedirectToAction("Logout");
+			return RedirectToAction("Login","Auth");
 		}
 
 	}

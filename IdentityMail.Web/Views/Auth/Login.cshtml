@@ -1,24 +1,67 @@
 ﻿@model LoginDto
 @{
-    ViewData["Title"] = "Login";
+    ViewData["Title"] = "Giriş Yap";
 }
 
-<h1>Giriş Yap</h1>
+<div class="row justify-content-center py-4">
+    <div class="col-md-6 col-lg-5">
+        <div class="card border-0 shadow-sm rounded-4">
+            <div class="card-body p-4 p-sm-5">
 
-<form method="post">
+                <!-- Başlık ve İkon -->
+                <div class="text-center mb-4">
+                    <div class="bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                        <i class="fa-solid fa-user-lock fs-3"></i>
+                    </div>
+                    <h2 class="fw-bold mb-1">Giriş Yap</h2>
+                    <p class="text-muted small">Hesabınıza erişmek için bilgilerinizi girin</p>
+                </div>
+
+                <!-- Form -->
+                <form method="post">
+                    <!-- Email Alanı -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Email Adresi</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted border-end-0">
+                                <i class="fa-regular fa-envelope"></i>
+                            </span>
+                            <input type="email" asp-for="Email" class="form-control bg-light border-start-0 ps-0" placeholder="ornek@email.com" required />
+                        </div>
+                    </div>
+
+                    <!-- Şifre Alanı -->
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Şifre</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light text-muted border-end-0">
+                                <i class="fa-solid fa-lock"></i>
+                            </span>
+                            <input type="password" asp-for="Password" class="form-control bg-light border-start-0 ps-0" placeholder="••••••••" required />
+                        </div>
+                    </div>
+
+                    <!-- Doğrulama Hataları -->
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger py-2 px-3 small rounded-3 mb-3">
+                            <span class="text-danger">@Html.ValidationSummary()</span>
+                        </div>
+                    }
+
+                    <!-- Giriş Yap Butonu -->
+                    <button type="submit" class="btn btn-primary w-100 py-2.5 fw-semibold d-flex align-items-center justify-content-center gap-2 rounded-3 shadow-sm mt-4">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Giriş Yap</span>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 
-    <label>email</label>
-    <input type="email" asp-for="Email" class="form-control" required />
-    <br />
-
-    <label>şifre</label>
-    <input type="password" asp-for="Password" class="form-control" required />
-    <br />
 
 
 
-    <span class="text-danger">@Html.ValidationSummary()</span>
-    <button class="btn btn-outline-dark">Giriş Yap</button>
-
-</form>

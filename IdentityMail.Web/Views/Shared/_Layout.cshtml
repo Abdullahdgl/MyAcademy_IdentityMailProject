@@ -4,43 +4,154 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - IdentityMail.Web</title>
+
+    <!-- Google Fonts & FontAwesome (Görselliği artırmak için) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/IdentityMail.Web.styles.css" asp-append-version="true" />
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            font-size: 1.25rem;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+            border-radius: 8px;
+            padding: 0.5rem 1rem !important;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .logout-link {
+            background-color: rgba(220, 53, 69, 0.2);
+            color: #ffdae0 !important;
+        }
+
+        .logout-link:hover {
+            background-color: #dc3545 !important;
+            color: #fff !important;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        .main-card-wrapper {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+            padding: 2rem;
+            margin-top: 1.5rem;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e9ecef !important;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">IdentityMail.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        <nav class="navbar navbar-expand-sm navbar-dark border-bottom mb-4">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i class="fa-solid fa-envelope-open-text fs-4"></i>
+                    <span>IdentityMail<span class="opacity-75">.Web</span></span>
+                </a>
+                
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto align-items-center gap-2">
+                        
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <!-- Giriş Yapmış Kullanıcı Görür -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center gap-2" asp-area="" asp-controller="Message" asp-action="Index">
+                                    <i class="fa-regular fa-inbox"></i>
+                                    <span>Gelen Kutusu</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link logout-link d-flex align-items-center gap-2" asp-area="" asp-controller="Auth" asp-action="Logout">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    <span>Çıkış Yap</span>
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <!-- Giriş Yapmamış Kullanıcı Görür -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white d-flex align-items-center gap-2" asp-area="" asp-controller="Auth" asp-action="Login">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <span>Giriş Yap</span>
+                                </a>
+                            </li>
+                        }
+
+
+                        @* <a href="/Auth/Logout" class="btn btn-info">Çıkış Yap</a> *@
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    <div class="container mb-5">
+        <main role="main" class="main-card-wrapper">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - IdentityMail.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer text-muted py-3 mt-auto">
+        <div class="container text-center text-md-start d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <div>
+                &copy; 2026 - <span class="fw-semibold text-dark">IdentityMail.Web</span> - Tüm Hakları Saklıdır.
+            </div>
+            <div>
+                <a class="text-decoration-none text-muted hover-primary" asp-area="" asp-controller="Home" asp-action="Privacy">
+                    <i class="fa-solid fa-shield-halved me-1"></i>IdentityMail Project
+                </a>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

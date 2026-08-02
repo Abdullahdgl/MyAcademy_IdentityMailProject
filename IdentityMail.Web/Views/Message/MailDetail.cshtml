@@ -1,0 +1,37 @@
+﻿@model UserMessage
+@{
+    ViewData["Title"] = "MailDetail";
+}
+
+<h1>Gelen Mail İçeriği</h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>Gönderen Ad Soyad:</th>
+        <th>@Model.Sender.FirstName @Model.Sender.LastName</th>
+    </tr>
+
+
+    <tr>
+        <th>Gönderen Email:</th>
+        <th>@Model.Sender.Email</th>
+    </tr>
+
+    <tr>
+        <th>Konu:</th>
+        <th>@Model.Subject</th>
+    </tr>
+    <tr>
+        <th>Tarih :</th>
+        <th>@Model.SendDate</th>
+    </tr>
+
+    <tr>
+        <th>Mail İçeriği:</th>
+        <th>@Model.Body</th>
+    </tr>
+
+</table>
+
+
+<a href="/message/index" class="btn btn-dark">Gelen Kutusuna Dön</a>
