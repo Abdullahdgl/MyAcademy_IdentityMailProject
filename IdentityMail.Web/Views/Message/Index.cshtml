@@ -8,34 +8,40 @@
 
 <h3>Gelen mesajlar</h3>
 
-<table class="table table-bordered table-hover">
+<div>
 
-    <tr>
-        <th>Gönder Ad soyad</th>
-        <th>Email</th>
-        <th>Konu</th>
-        <th>Tarih</th>
-        <th>İşlemler</th>
-    </tr>
-    
-    @foreach (var item in Model)
-    {
+    <table class="table table-bordered table-hover">
+
         <tr>
-            <td>@item.Sender.FirstName @item.Sender.LastName</td>
-            <td>@item.Sender.Email</td>
-            <td>@item.Subject</td>
-            <td>@item.SendDate</td>
-            <td>
-
-                <a href="/message/maildetail/@item.Id" class="btn btn-outline-info" >Meail i Görüntüle</a>
-                <a href="#" class="btn btn-outline-danger">Sil</a>
-
-            </td>
+            <th>Gönder Ad soyad</th>
+            <th>Email</th>
+            <th>Konu</th>
+            <th>Tarih</th>
+            <th>İşlemler</th>
         </tr>
-    }
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Sender.FirstName @item.Sender.LastName</td>
+                <td>@item.Sender.Email</td>
+                <td>@item.Subject</td>
+                <td>@item.SendDate</td>
+                <td>
+
+                    <a href="/message/maildetail/@item.Id" class="btn btn-outline-info">Meail i Görüntüle</a>
+                    <a href="#" class="btn btn-outline-danger">Sil</a>
+
+                </td>
+            </tr>
+        }
 
 
-</table>
+    </table>
+
+
+</div>
+
 
 <a href="/Message/SendMail" class="btn btn-outline-dark">Yeni Mail Gönder</a>
 
