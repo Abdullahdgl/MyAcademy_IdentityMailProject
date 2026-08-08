@@ -1,0 +1,111 @@
+﻿
+@*
+   Layout SideBar
+   
+*@
+
+<div class="d-flex flex-column flex-shrink-0 p-3 bg-white border-end"
+     style="width: 280px; min-height: 100vh;">
+
+    <!-- Yeni Mesaj -->
+    <a href="/Message/Create"
+       class="btn btn-primary w-100 mb-4">
+        <i class="bi bi-pencil-square me-2"></i>
+        Yeni Mesaj
+    </a>
+
+    <!-- Menü -->
+    <ul class="nav nav-pills flex-column mb-auto">
+
+        <!-- Gelen Kutusu -->
+        <li class="nav-item mb-1">
+            <a href="/Message/Inbox"
+               class="nav-link text-dark">
+                <i class="bi bi-inbox me-2"></i>
+                Gelen Kutusu
+
+                <span class="badge bg-danger rounded-pill float-end">
+                    3
+                </span>
+            </a>
+        </li>
+
+        <!-- Gönderilenler -->
+        <li class="nav-item mb-1">
+            <a href="/Message/Sent"
+               class="nav-link text-dark">
+                <i class="bi bi-send me-2"></i>
+                Gönderilenler
+            </a>
+        </li>
+
+        <!-- Taslaklar -->
+        <li class="nav-item mb-1">
+            <a href="/Message/Draft"
+               class="nav-link text-dark">
+                <i class="bi bi-file-earmark-text me-2"></i>
+                Taslaklar
+
+                <span class="badge bg-secondary rounded-pill float-end">
+                    2
+                </span>
+            </a>
+        </li>
+
+        <!-- Önemli Mesajlar -->
+        <li class="nav-item mb-1">
+            <a href="/Message/Important"
+               class="nav-link text-dark">
+                <i class="bi bi-star me-2"></i>
+                Önemli Mesajlar
+            </a>
+        </li>
+
+        <!-- Çöp Kutusu -->
+        <li class="nav-item mb-1">
+            <a href="/Message/Trash"
+               class="nav-link text-dark">
+                <i class="bi bi-trash me-2"></i>
+                Çöp Kutusu
+            </a>
+        </li>
+
+        <hr class="my-3">
+
+        <!-- Kategoriler -->
+        <li class="nav-item">
+            <span class="text-muted small fw-semibold px-3">
+                KATEGORİLER
+            </span>
+        </li>
+
+        <li class="nav-item mt-2">
+            <a href="/Message/Category/Work"
+               class="nav-link text-dark">
+                <i class="bi bi-circle-fill text-primary me-2"
+                   style="font-size: 8px;"></i>
+                İş
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/Message/Category/Personal"
+               class="nav-link text-dark">
+                <i class="bi bi-circle-fill text-success me-2"
+                   style="font-size: 8px;"></i>
+                Kişisel
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="/Message/Category/Important"
+               class="nav-link text-dark">
+                <i class="bi bi-circle-fill text-warning me-2"
+                   style="font-size: 8px;"></i>
+                Önemli
+            </a>
+        </li>
+
+    </ul>
+
+</div>
