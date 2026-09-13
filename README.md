@@ -24,5 +24,11 @@ Yapı: DTO • ViewModel • Service • ViewComponent
 ⭐ Soft-delete: alıcı IsDeleted, gönderen IsDeletedBySender — bir taraf silince diğeri durur
 👁️ Mesaj açılınca IsRead + ReadAt; sidebar’da _LayoutSidebar ViewComponent ile okunmamış / taslak rozeti
 🖼️ Profil fotoğrafı wwwroot/uploads/profiles altına yüklenir
+ 
+ 
+ 
+ 
+ 
+ 
 
 #ASPNetCore #CSharp #EntityFramework #Identity #MVC #SQLServer #YazılımGeliştirme
