@@ -11,11 +11,25 @@ M&Y Yazılım Eğitim Akademi Danışmanlık çatısı altında geliştirdiğim 
 <br/>
 
 🔧 Kullandığım Teknolojiler
+<br/>
+
 Backend: C# • ASP.NET Core 8 MVC
+<br/>
+
 Veritabanı: MS SQL Server • Entity Framework Core • LINQ
+<br/>
+
 Kimlik & Güvenlik: ASP.NET Core Identity (AppUser / AppRole) • Cookie Authentication (IdentityMailCookie) • Role-Based Authorization (Admin / User)
+<br/>
+
+
 Frontend: Razor Views • HTML • CSS • Bootstrap • JavaScript • jQuery
+<br/>
+
 Yapı: DTO • ViewModel • Service • ViewComponent
+<br/>
+<br/>
+
 
 ✨ Öne Çıkan Teknik Özellikler
 <br/>
