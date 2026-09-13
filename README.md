@@ -27,8 +27,17 @@ Yapı: DTO • ViewModel • Service • ViewComponent
  <img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/1871ef9e-9472-44d4-80d9-3f59aa06824f" />
 
  
- 
- 
+ <img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/46f1c49f-269c-4c4c-ba10-e02ec368cc1b" />
+
+ <img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/c93fb1bb-8bba-4ca8-b0c6-ec2c9fdf6891" />
+
+<img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/13a506a3-a94f-418b-b82d-fb481ac2c52b" />
+
+<img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/8f587aaf-1f4b-41af-a5ac-49950ca6a91b" />
+
+<img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/2cbfffd3-f715-476d-ba93-6479777f4f65" />
+
+
  
  
 
