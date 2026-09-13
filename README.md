@@ -12,7 +12,9 @@ Frontend: Razor Views • HTML • CSS • Bootstrap • JavaScript • jQuery
 Yapı: DTO • ViewModel • Service • ViewComponent
 
 ✨ Öne Çıkan Teknik Özellikler
+<br/>
 📬 Gelen kutusu, gönderilenler, taslaklar, önemli mesajlar ve çöp kutusu — ortak liste ekranı, klasöre göre farklı sorgu
+<br/>
 💬 Yanıtlama: ParentMessageId ile self-referencing mesaj ilişkisi (Re: konusu + orijinal metin)
 🔎 MessageQueryService içinde LINQ ile dinamik arama, okundu/yıldız/tarih/kategori filtresi, sıralama ve sayfalama
 🔗 EF Core’da Sender–Receiver (Restrict silme), kategori (SetNull) ve Include ile ilişkili veri çekme
