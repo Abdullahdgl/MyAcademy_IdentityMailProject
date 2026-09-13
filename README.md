@@ -20,8 +20,8 @@ Veritabanı: MS SQL Server • Entity Framework Core • LINQ
 <br/>
 
 Kimlik & Güvenlik: ASP.NET Core Identity (AppUser / AppRole) • Cookie Authentication (IdentityMailCookie) • Role-Based Authorization (Admin / User)
-<br/>
 
+<br/><br/>
 
 Frontend: Razor Views • HTML • CSS • Bootstrap • JavaScript • jQuery
 <br/>
