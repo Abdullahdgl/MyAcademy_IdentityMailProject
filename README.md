@@ -24,7 +24,8 @@ Yapı: DTO • ViewModel • Service • ViewComponent
 ⭐ Soft-delete: alıcı IsDeleted, gönderen IsDeletedBySender — bir taraf silince diğeri durur
 👁️ Mesaj açılınca IsRead + ReadAt; sidebar’da _LayoutSidebar ViewComponent ile okunmamış / taslak rozeti
 🖼️ Profil fotoğrafı wwwroot/uploads/profiles altına yüklenir
- 
+ <img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/1871ef9e-9472-44d4-80d9-3f59aa06824f" />
+
  
  
  
