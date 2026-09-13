@@ -1,8 +1,14 @@
 🚀 Yeni Projemi Tamamladım: IdentityMail — Modern Mesajlaşma Sistemi
+<br/>
+<br/>
 
 M&Y Yazılım Eğitim Akademi Danışmanlık çatısı altında geliştirdiğim mesajlaşma sistemi projemi tamamladım! 🎉
+<br/>
+<br/>
 
 📩 IdentityMail, kayıtlı kullanıcıların birbirine mesaj gönderdiği bir web uygulamasıdır. Dışarıya SMTP ile mail atmaz; alıcı sistemde yoksa mesaj gitmez. Mesajlar klasörlere ve kullanıcının kendi kategorilerine ayrılır, filtrelenir, yönetilir.
+<br/>
+<br/>
 
 🔧 Kullandığım Teknolojiler
 Backend: C# • ASP.NET Core 8 MVC
@@ -36,6 +42,8 @@ Yapı: DTO • ViewModel • Service • ViewComponent
 👁️ Mesaj açılınca IsRead + ReadAt; sidebar’da _LayoutSidebar ViewComponent ile okunmamış / taslak rozeti
 <br/>
 🖼️ Profil fotoğrafı wwwroot/uploads/profiles altına yüklenir
+ <br/>
+ <br/>
  <br/>
  <img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/1871ef9e-9472-44d4-80d9-3f59aa06824f" />
 
