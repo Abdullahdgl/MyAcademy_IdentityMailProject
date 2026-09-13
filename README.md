@@ -16,16 +16,27 @@ Yapı: DTO • ViewModel • Service • ViewComponent
 📬 Gelen kutusu, gönderilenler, taslaklar, önemli mesajlar ve çöp kutusu — ortak liste ekranı, klasöre göre farklı sorgu
 <br/>
 💬 Yanıtlama: ParentMessageId ile self-referencing mesaj ilişkisi (Re: konusu + orijinal metin)
+<br/>
 🔎 MessageQueryService içinde LINQ ile dinamik arama, okundu/yıldız/tarih/kategori filtresi, sıralama ve sayfalama
+<br/>
 🔗 EF Core’da Sender–Receiver (Restrict silme), kategori (SetNull) ve Include ile ilişkili veri çekme
+<br/>
 📊 Admin dashboard: Count, GroupBy, Select, OrderBy ile kullanıcı / mesaj / kategori istatistikleri ve en aktif gönderenler
+<br/>
 🗂️ Kullanıcıya özel kategoriler — kayıtta CategorySeedHelper ile İş / Kişisel / Önemli; profilde yeni kategori
+<br/>
 👤 DTO (SendMailDto, LoginDto…) ve ViewModel (MessageListViewModel, AdminDashboardViewModel) ile entity’nin UI’dan ayrılması
+<br/>
 🔐 Identity: kayıt, giriş, çıkış, şifre sıfırlama token’ı, e-posta doğrulama (demo), CustomErrorDescriber ile Türkçe hata
+<br/>
 👮 Admin paneli: kullanıcı aktif/pasif (IsActive), tek rol atama, şikayet edilen mesajlar (IsReported)
+<br/>
 ⭐ Soft-delete: alıcı IsDeleted, gönderen IsDeletedBySender — bir taraf silince diğeri durur
+<br/>
 👁️ Mesaj açılınca IsRead + ReadAt; sidebar’da _LayoutSidebar ViewComponent ile okunmamış / taslak rozeti
+<br/>
 🖼️ Profil fotoğrafı wwwroot/uploads/profiles altına yüklenir
+ <br/>
  <img width="945" height="373" alt="image" src="https://github.com/user-attachments/assets/1871ef9e-9472-44d4-80d9-3f59aa06824f" />
 
  
